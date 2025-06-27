@@ -1,0 +1,8 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 22/06/2025 05:51
+
+.SUBCKT inv_1_test VDD_D VSS_D A Y
+M$1 VSS_D A Y VSS_D sg13_lv_nmos L=0.13u W=0.74u AS=0.259p AD=0.259p PS=2.18u
++ PD=2.18u
+M$2 VDD_D A Y VDD_D sg13_lv_pmos L=0.13u W=1.12u AS=0.392p AD=0.392p PS=2.94u
++ PD=2.94u
+.ENDS inv_1_test

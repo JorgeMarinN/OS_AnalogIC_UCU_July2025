@@ -1,0 +1,7 @@
+** sch_path: /home/designer/shared/OS_AnalogIC_UCU_July2025/Python_layout/transmission_gate/transmission_gate.sch
+.subckt transmission_gate B GN A GP
+*.PININFO B:B GN:B A:B GP:B
+M1 B GN A A sg13_lv_nmos l=1u w=0.4u ng=1 m=1
+M2 A GP B B sg13_lv_pmos l=1u w=1.2u ng=1 m=1
+.ends
+.end

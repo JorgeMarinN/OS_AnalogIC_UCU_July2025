@@ -1,0 +1,8 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 22/06/2025 04:27
+
+.SUBCKT transmission_gate
+M$1 \$2 \$3 \$1 \$1 sg13_lv_pmos L=1u W=1.2u AS=0.408p AD=0.408p PS=3.08u
++ PD=3.08u
+M$2 \$2 \$4 \$1 \$2 sg13_lv_nmos L=1u W=0.4u AS=0.136p AD=0.136p PS=1.48u
++ PD=1.48u
+.ENDS transmission_gate
