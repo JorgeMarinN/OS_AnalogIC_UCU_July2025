@@ -1,3 +1,9 @@
+# Backup folders
+
+Python_layout/
+Ref_files/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
