@@ -1,7 +1,0 @@
-** sch_path: /home/designer/shared/OS_AnalogIC_UCU_July2025/Python_layout/transmission_gate/inv_1_test.sch
-.subckt inv_1_test VDD_D VSS_D A Y
-*.PININFO VDD_D:B VSS_D:B A:B Y:B
-M1 Y A VSS_D VSS_D sg13_lv_nmos w=0.74u l=0.13u ng=1 m=1
-M2 Y A VDD_D VDD_D sg13_lv_pmos w=1.12u l=0.13u ng=1 m=1
-.ends
-.end
