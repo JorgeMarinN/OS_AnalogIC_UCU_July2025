@@ -23,7 +23,7 @@ vvss vss 0 0
 
 .control
    tran 10p 10n
-   *wrdata [your_path]/TT_3stage_RO_v1p1.txt v(V_1)
+   wrdata TT_3stage_RO_v1p1.txt v(V_1)
    plot v(V_1) v(V_2) v(V_3)
 .endc
 "}
