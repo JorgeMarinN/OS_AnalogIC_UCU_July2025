@@ -1,0 +1,89 @@
+** sch_path: /home/designer/shared/OS_AnalogIC_UCU_July2025/Ref_files/UNICCASS_2024_IHP/tb_OTA_stability_UNIC-CASS2024.sch
+**.subckt tb_OTA_stability_UNIC-CASS2024
+V1 VDD GND 1.8
+I0 GND net2 1u
+V2 net1 GND {CM_VOLTAGE}
+V3 INP net1 AC 1
+C1 OUT GND 5p m=1
+C2 INM GND 5G m=1
+L5 OUT INM 5G m=1
+x2 INP INM OUT VDD GND net2 OTA_UNIC-CASS2024
+**** begin user architecture code
+
+
+.param CM_VOLTAGE = 0.9
+.control
+save all
+ac dec 200 10 1000Meg
+settype decibel out
+plot vdb(out)
+let phase_val = 180/PI*cph(out)
+let PM_val = 180 + 180/PI*cph(out)
+settype phase phase_val
+plot phase_val
+meas ac PM FIND PM_val WHEN vdb(out)=0
+meas ac GBW WHEN vdb(out)=0
+op
+
+let id1  = @m.x1.xm1.msky130_fd_pr__nfet_01v8_lvt[id]
+let id2  = @m.x1.xm2.msky130_fd_pr__nfet_01v8_lvt[id]
+let id3  = @m.x1.xm3.msky130_fd_pr__pfet_01v8_lvt[id]
+let id4  = @m.x1.xm4.msky130_fd_pr__pfet_01v8_lvt[id]
+let id5  = @m.x1.xm5.msky130_fd_pr__pfet_01v8_lvt[id]
+let id6  = @m.x1.xm6.msky130_fd_pr__nfet_01v8_lvt[id]
+let id7  = @m.x1.xm7.msky130_fd_pr__nfet_01v8_lvt[id]
+let id8  = @m.x1.xm8.msky130_fd_pr__nfet_01v8_lvt[id]
+
+let gm1  = @m.x1.xm1.msky130_fd_pr__nfet_01v8_lvt[gm]
+let gm2  = @m.x1.xm2.msky130_fd_pr__nfet_01v8_lvt[gm]
+let gm3  = @m.x1.xm3.msky130_fd_pr__pfet_01v8_lvt[gm]
+let gm4  = @m.x1.xm4.msky130_fd_pr__pfet_01v8_lvt[gm]
+let gm5  = @m.x1.xm5.msky130_fd_pr__pfet_01v8_lvt[gm]
+let gm6  = @m.x1.xm6.msky130_fd_pr__nfet_01v8_lvt[gm]
+let gm7  = @m.x1.xm7.msky130_fd_pr__nfet_01v8_lvt[gm]
+let gm8  = @m.x1.xm8.msky130_fd_pr__nfet_01v8_lvt[gm]
+
+let cgs5  = @m.x1.xm5.msky130_fd_pr__pfet_01v8_lvt[cgg]
+
+print v(inp)
+print v(inm)
+print v(out)
+
+print cgs5
+print id1
+print id2
+print id5
+print gm1
+print gm2
+print gm5
+.endc
+
+
+?
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /home/designer/shared/OS_AnalogIC_UCU_July2025/Ref_files/UNICCASS_2024_IHP/OTA_UNIC-CASS2024.sym # of
+*+ pins=6
+** sym_path: /home/designer/shared/OS_AnalogIC_UCU_July2025/Ref_files/UNICCASS_2024_IHP/OTA_UNIC-CASS2024.sym
+** sch_path: /home/designer/shared/OS_AnalogIC_UCU_July2025/Ref_files/UNICCASS_2024_IHP/OTA_UNIC-CASS2024.sch
+.subckt OTA_UNIC-CASS2024 IN_P IN_M OUT VDD VSS ibias
+*.ipin IN_M
+*.ipin IN_P
+*.ipin VDD
+*.ipin VSS
+*.ipin ibias
+*.opin OUT
+*  M1 -  nfet_01v8_lvt  IS MISSING !!!!
+*  M2 -  nfet_01v8_lvt  IS MISSING !!!!
+*  M3 -  pfet_01v8_lvt  IS MISSING !!!!
+*  M4 -  pfet_01v8_lvt  IS MISSING !!!!
+*  M5 -  pfet_01v8_lvt  IS MISSING !!!!
+*  M6 -  nfet_01v8_lvt  IS MISSING !!!!
+*  M7 -  nfet_01v8_lvt  IS MISSING !!!!
+*  M8 -  nfet_01v8_lvt  IS MISSING !!!!
+C2 OUT Vmid 1.6p m=1
+.ends
+
+.GLOBAL GND
+.end
