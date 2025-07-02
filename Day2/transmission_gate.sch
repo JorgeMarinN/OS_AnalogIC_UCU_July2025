@@ -26,7 +26,7 @@ N 780 -1330 820 -1330 {
 lab=GP}
 C {sg13g2_pr/sg13_lv_nmos.sym} 550 -1330 2 1 {name=M1
 l=0.13u
-w=3.3u
+w=1u
 ng=1
 m=1
 model=sg13_lv_nmos
@@ -37,7 +37,7 @@ C {iopin.sym} 490 -1330 0 1 {name=p3 lab=GN}
 C {iopin.sym} 570 -1270 0 0 {name=p4 lab=A}
 C {sg13g2_pr/sg13_lv_pmos.sym} 760 -1330 0 1 {name=M2
 l=0.13u
-w=10u
+w=3u
 ng=1
 m=1
 model=sg13_lv_pmos
