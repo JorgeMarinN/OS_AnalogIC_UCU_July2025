@@ -16,8 +16,8 @@ plot v(vin) v(vout)+2
 .endc
 
 .measure tran tdelay
-+ TRIG tran1.V(VIN) TD=0u VAL=0.9 RISE=1
-+ TARG tran1.V(VOUT) TD=0u VAL=0.9 RISE=1
++ TRIG tran1.V(VIN) TD=0u VAL=0.6 RISE=1
++ TARG tran1.V(VOUT) TD=0u VAL=0.6 RISE=1
 
 
 "}
